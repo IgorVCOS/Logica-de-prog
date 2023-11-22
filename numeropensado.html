@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advinha</title>
+</head>
+<script>
+     function pulaLinha() {
+
+document.write("<br>");
+}
+
+function mostra(frase) {
+
+document.write(frase);
+pulaLinha();
+}
+    var numeroPensado = Math.round(Math.random() * 10); //math.random bota um número aleatório
+     var tentativas = 1;
+    while (tentativas <= 3) {
+        var chute = parseInt(prompt("digite o número"));
+       // console.log(numeroPensado); //mostra o resultado no console
+        if (chute == numeroPensado) {
+            mostra("você acertou! o numero pensado foi " + numeroPensado);
+            break; //ENCERRA O LOOP
+
+        } else {
+            mostra("você errou!");
+        }
+        tentativas++;
+    }
+      //  if (chute != numeroPensado) {
+       //     mostra("você errou! o número pensado foi " + numeroPensado);
+     //   }
+
+       
+</script>
+
+<body>
+
+</body>
+
+</html>

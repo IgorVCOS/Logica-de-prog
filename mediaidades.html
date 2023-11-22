@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familia</title>
+</head>
+<script>
+     function pulaLinha() {
+
+document.write("<br>");
+document.write("<br>");
+}
+
+function mostra(frase) {
+
+document.write(frase);
+pulaLinha();
+}
+//3
+var totalFamilia = parseInt(prompt("quantos familiares você tem?"));
+
+var numero = 1;
+while(numero <= totalFamilia){ // LÊ A QUANTIDADE DE FAMILIARES E DEFINE O VALOR QUE TEM QUE SER MAIOR
+    var totalIdade = 0;
+    var idadeFamilia = parseInt(prompt("informe a idade do familiar:"));
+    totalIdade = totalIdade + idadeFamilia;
+    numero ++;
+}
+
+var mediaIdades = totalIdade/totalFamilia;
+mostra("A média das idades dos familiares é:");
+mostra("FIM");
+
+
+</script>
+<body>
+    
+</body>
+</html>

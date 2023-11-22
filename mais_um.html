@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calculaImc(altura, peso) {
+
+var imc = peso / (altura * altura);
+return imc; //retorna a função passo após passo
+
+}
+
+alert("vamos ver seu IMC");
+
+var imcFlavio = calculaImc(1.71, 73);
+var imcAmigo = calculaImc(1.72, 68);
+
+mostra(imcFlavio);
+mostra(imcAmigo);
+</script>
+<body>
+    
+</body>
+</html>

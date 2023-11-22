@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<canvas width="600px" height="400px"></canvas>
+<canvas id="exe"></canvas>
+<script>
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+    
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0,0, 600, 400);
+    
+
+    pincel.fillStyle = "green";
+    pincel.fillRect(0,0, 200, 400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400,0,200,400);
+
+    pincel.fillStyle = "yellow";
+    pincel.beginPath();
+    pincel.moveTo(300,200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = "blue";
+    pincel.beginPath();
+    pincel.arc(300,200, 50, 0, 2*3.14);
+    pincel.fill();
+
+    function clicaDesenho(evento){
+       // alert("Cliquei");
+       var x = evento.pageX - tela.offsetLeft; //SERVE PARA FAZER COM QUE A TELA CONTE SOMENTE A ÁREA DO CANVAS
+       var y = evento.pageY - tela.offsetTop; 
+     pincel.fillStyle = 'blue'
+     pincel.beginPath();
+     pincel.arc(x,y,10,0, 2* 3.14);
+     pincel.fill();
+       //alert(x + "," + y);
+        console.log(evento);
+    }
+
+    tela.onclick = clicaDesenho;
+
+    function mudaCor() {
+
+alert('Funcionou!');
+return false;
+}
+
+tela.oncontextmenu = mudaCor;
+    
+    
+</script>
+<body>
+    
+</body>
+</html>

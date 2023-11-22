@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+//TODO TEXTO DEVE ESTAR ENTRE ASPAS
+    //nome da função deve ser sempre um verbo e também abrir chaves
+    function pulaLinha() {  //função é um conjunto de instruções pro código que devem ser chamadas
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function Mostra(Frase) {
+        document.write(Frase);
+    }
+
+    function skipLine() {  //função é um conjunto de instruções pro código que devem ser chamadas
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function Show(Message) {
+        document.write(Message);
+        skipLine();
+    }
+
+    function calculaImc (peso, altura){ // função vai receber dois parametros
+        var imc = peso / (altura * altura);
+        Show(" o Imc de igor é: " + Math.round(imc) );
+    }
+
+    alert("site mt ruim meu deus do céu ")
+    var ano = 2022; //ano é a variável e 2022 é o valor que a variável recebe
+    Mostra("igor tem: " + (ano - 2004) + " anos");
+
+    pulaLinha();
+
+    ano = 2024 //quando a variável é usada novamente, não necessita colocar o VAR novamente
+    Mostra("Monique tem: " + (ano - 2004) + " anos");
+
+    pulaLinha();
+
+    var idadeIgor = 18;
+    var idadeMonique = 20;
+
+    var media = (18 + 20) / 2;
+    Mostra("a média das idades é " + Math.round(media));//usamos parenteses para dizer que a operação vem primeiro
+    //Math.round serve para arredondar valores
+
+    pulaLinha();
+
+    var nome = "igor"
+    Mostra("a idade de " + nome + " é " + idadeIgor);
+     
+      skipLine();
+    var pesoIgor = 55;
+    var alturaIgor = 1.63;
+
+    calculaImc(55, 1.63);
+
+   
+</script>
+
+<body>
+
+</body>
+
+</html>
